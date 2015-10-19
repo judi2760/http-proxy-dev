@@ -8,6 +8,7 @@
   },
   "author": "wskcoder",
   "dependencies": {
-    "http-proxy": "^1.11.2"
+    "http-proxy": "^1.11.2",
+    "st": "^1.0.0"
   }
 }

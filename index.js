@@ -11,7 +11,8 @@ GLOBAL.services = {
     port: 9000
 }
 
-GLOBAL.staticPath = '/Users/wmanriques/Desktop/dev'
+GLOBAL.stPath = '/Users/wmanriques/Desktop/dev/React'
+GLOBAL.stUrl = '/static'
 
 server.listen(MAIN_PORT)
 

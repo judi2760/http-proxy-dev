@@ -3,13 +3,16 @@
 const httpProxy = require('http-proxy')
 const proxy = httpProxy.createProxyServer({})
 
-proxy.on('error', function (err, req, res) {
+function onErrorFunc(err, req, res){
 
-  	res.writeHead(500, {'Content-Type': 'text/plain'});
+	res.writeHead(500, {'Content-Type': 'text/plain'});
   	res.end(JSON.stringify(err));
-});
+}
+
+proxy.on('error', onErrorFunc);
 
 function onServices(req, res){
+	
 	proxy.web(req, res, {
 		target : GLOBAL.services
 	})
